@@ -36,16 +36,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.skip a:focus {
+.skip a {
+    top: -40px;
     background: white;
-    left: 0;
-    top: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
-    z-index: 1;
-    margin-bottom: 40px;
     position: absolute;
+}
+
+.skip a:focus {
+    top: 0px;
 }
 
 
@@ -182,6 +183,8 @@ header p {
     .container {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-template-columns: 50px auto 500px auto 50px;
+        grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
     }
     nav {
         background-color: #ddd;
@@ -192,10 +195,12 @@ header p {
     .about, .clients, .method-image, .contact-image {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-column: 3 / 5;
     }
     .about-image, .clients-image, .method, .contact {
         /*Your code here */
         /* See documentation for desktop view */
+        grid-column: 2 / 4;
     }
 }
 
